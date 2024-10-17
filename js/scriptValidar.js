@@ -15,7 +15,7 @@ $(document).ready(function () {
         // Realizar la solicitud AJAX
         $.ajax({
             type: "POST",
-            url: "/CityUnach/controller/insertar.php",
+            url: "controller/insertar.php",
             data: {
                 nomPro: nombre,
                 precioP: precio,
@@ -28,13 +28,13 @@ $(document).ready(function () {
                     $("#existenciaP").val("");
 
                       // Ocultar el formulario
-                      $('#exampleModal').hide(); // Asegúrate de que el ID sea correcto
+                      $('#exampleModal').hide();
 
                    
                     $('#modalExito').modal('show');
 
                     $('#aceptarModal').off('click').on('click', function() {
-                        window.location = 'dashboard.php'; // Cambia esto si deseas redirigir a otra página
+                        window.location = 'dashboard.php'; 
                     });
                 } else {
                     alert("Error al guardar el producto. Intente de nuevo.");
